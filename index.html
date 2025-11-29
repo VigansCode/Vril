@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .image-section {
+            width: 100%;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #section1 {
+            background-image: url('https://static.wixstatic.com/media/e2da02_c2fe2dd9d1114dd09722190532e07daa~mv2.jpg');
+        }
+
+        #section2 {
+            background-image: url('https://static.wixstatic.com/media/e2da02_914ce5119c814be690063c73706968db~mv2.jpg');
+        }
+
+        #section3 {
+            background-image: url('https://static.wixstatic.com/media/e2da02_c6de366d5ec34e2797da401c0ef2d566~mv2.jpg');
+        }
+
+        #section4 {
+            background-image: url('https://static.wixstatic.com/media/e2da02_78755bf7c37f4ef2a0e43a074d39df43~mv2.jpg');
+        }
+
+        #section5 {
+            background-image: url('https://static.wixstatic.com/media/e2da02_a687cb97616c4da7b72f08d1f0050904~mv2.jpg');
+        }
+
+        .home-button {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: 2px solid white;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .home-button:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: black;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="section1" class="image-section"></div>
+    <div id="section2" class="image-section"></div>
+    <div id="section3" class="image-section"></div>
+    <div id="section4" class="image-section"></div>
+    <div id="section5" class="image-section"></div>
+
+    <button class="home-button" onclick="scrollToTop()">HOME</button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
